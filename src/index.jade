@@ -1,5 +1,5 @@
 doctype html
-html
+html(ng-app="landing_page")
   head
     meta(charset='utf-8')
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -10,35 +10,13 @@ html
     link(href="css/style.css" rel="stylesheet")
   body
     .container
-      .profile-container
-        img.avatar.animated.flip(src="img/perfil.jpg")
-        img.field(src="img/muelle2.svg")
-        .profile-entrie
-          h1.profile-name.animated.bounce Erifranck Nuñez
-        span.profile-jobs
-          p.profile-job Desarrollador Frontend
-          p.profile-job Diseñador UI/UX
-          p.profile-job Ilustrador
-        .balloon.balloon-html.move_flying
-          .move_zoom
-            .move_x2
-              .move_y
-                img.balloon-float.fly(src="img/globoHTML.svg")
-        .balloon.balloon-css
-          .move_zoom
-            .move_x3
-              .move_y
-                img.balloon-float.fly(src="img/globoCSS.svg")
-        .balloon.balloon-js
-          .move_zoom
-            .move_x
-              .move_y
-                img.balloon-float.fly(src="img/globoJS.svg")
+      .view-animate-container.profile-container
+        .view-animate.bg-size(ng-view="")
       nav.url-container
         ul.url-list
           each i in ['aboutme','skills','experience','contact']
             li.url-navigation
-              a(href='##{i}' class='#{i} url')
+              a(ng-ref='#/#{i}' class='#{i} url')
       .btn-social
 
     script(src='js/main.js')

@@ -1,0 +1,34 @@
+@import 'mixins/materialcolor.styl'
+@import 'mixins/images.styl'
+.balloon
+  position absolute
+  opacity 0.8
+  &-html
+    left 20%
+    top 10%
+    balloon_position(3%,-2)
+  &-css 
+    top 5%
+    right 10%
+    balloon_position(4%,-2)
+  &-js
+    top 15%
+    right 30%
+    balloon_position(5%,-2)
+  &-float
+    width 100%
+    height 100%
+.fly
+  anim_name(flying,3s,alternate,infinite)
+.move_zoom
+  anim_name(flying_zoon,10s,alternate,infinite)
+.move_x
+  anim_name(flying_moveX,10s,alternate,infinite)
+.move_y
+  anim_name(flying_moveY,10s,alternate,infinite)
+.move_x2
+  anim_delay(4s)
+  anim_name(flying_moveX3,10s,alternate,infinite)
+.move_x3
+  anim_delay(3s)
+  anim_name(flying_moveX2,10s,alternate,infinite)
