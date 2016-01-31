@@ -34,7 +34,6 @@ gulp.task('html', ['clean:html'], function () {
     .pipe(isDist ? through() : plumber())
     .pipe(jade({ pretty: true }))
     .pipe(rename('index.html'))
-    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('.'))
     .pipe(connect.reload());
 });
