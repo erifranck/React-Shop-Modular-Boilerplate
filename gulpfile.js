@@ -35,14 +35,14 @@ gulp.task('html', ['clean:html'], function () {
     .pipe(jade({ pretty: true }))
     .pipe(rename('index.html'))
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('.'))
     .pipe(connect.reload());
 });
 
 gulp.task('other-html', ['clean:html'], function () {
   return gulp.src('src/**/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/templates'))
     .pipe(connect.reload());
 });
 
@@ -56,8 +56,8 @@ gulp.task('css', ['clean:css'], function () {
     }))
     .pipe(autoprefixer('last 2 versions', { map: false }))
     .pipe(isDist ? csso() : through())
-    .pipe(rename('build.css'))
-    .pipe(gulp.dest('dist/build'))
+    .pipe(rename('style.css'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(connect.reload());
 });
 
