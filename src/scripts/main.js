@@ -1,4 +1,4 @@
-window.$ = require('jquery')
+window.$ = require('jquery');
 
 
 console.log("'Allo, 'Allo!");
