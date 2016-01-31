@@ -56,7 +56,7 @@ gulp.task('css', ['clean:css'], function () {
     }))
     .pipe(autoprefixer('last 2 versions', { map: false }))
     .pipe(isDist ? csso() : through())
-    .pipe(rename('style.css'))
+    .pipe(rename('frelancer.css'))
     .pipe(gulp.dest('css'))
     .pipe(connect.reload());
 });
