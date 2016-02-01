@@ -9,16 +9,17 @@ html
     title Erifranck Nuñez Frontend Developer
     link(href="css/style.css" rel="stylesheet")
   body
-    main
+    .container
       .profile-container
         img.avatar.animated.flip(src="img/perfil.jpg")
-        hgroup.profile-entrie
+        img.field(src="img/muelle2.svg")
+        .profile-entrie
           h1.profile-name.animated.bounce Erifranck Nuñez
         span.profile-jobs
           p.profile-job Desarrollador Frontend
           p.profile-job Diseñador UI/UX
           p.profile-job Ilustrador
-        img.balloon.balloon-html(src="img/globoHTML.svg")
+        img.balloon.balloon-html.animated.fly(src="img/globoHTML.svg")
         img.balloon.balloon-css(src="img/globoCSS.svg")
         img.balloon.balloon-js(src="img/globoJS.svg")
       nav.url-container
@@ -26,5 +27,6 @@ html
           each i in ['aboutme','skills','experience','contact']
             li.url-navigation
               a(href='##{i}' class='#{i} url')
+      .btn-social
 
     script(src='js/main.js')
