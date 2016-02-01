@@ -7,8 +7,6 @@ body_color = #fff
 body_selection = #7fbd42
 body_background = peterriver
 
-h3_color = #ecf0f1
-
 // base
 
 body
@@ -21,27 +19,25 @@ body
    background-color: body_selection
    color: body_color
 
-h1
-  font-size: 72px
-  line-height: 82px
-  letter-spacing: -2px
-  margin-bottom: 16px
-
-h2
-  font-size: 42px
-  letter-spacing: -1px
-  margin-bottom: 8px
-
-h3
-  font-size: 24px
-  font-weight: normal
-  margin-bottom: 24px
-  color: h3_color
-
-hr
-  visibility: hidden
-  height: 20px
-
+.imgs-container
+  white-space nowrap
+  width 100%
+  height 100%
+  position relative
+.fly
+  position absolute
+  width 50%
+  height 50%
+.svg
+  &-html  
+    top 30px
+    left 10px
+  &-css
+    top 10px
+    left 70px
+  &-field
+    width 100%
+    height 100%
 ul
   list-style: none
 
@@ -58,5 +54,6 @@ a
 
 main
   width: 50%
+  height 50%
   margin: auto
   padding-left: 75px
