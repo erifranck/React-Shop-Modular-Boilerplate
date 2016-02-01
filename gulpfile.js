@@ -89,10 +89,10 @@ gulp.task('clean:css', function () {
 gulp.task('connect', ['build'], function (done) {
   connect.server({
     root: 'dist',
-    port: 80,
+    port: 8000,
     livereload: true
   });
-  opn('http://localhost:80', done);
+  opn('http://localhost:8000', done);
 });
 
 gulp.task('watch', function () {
