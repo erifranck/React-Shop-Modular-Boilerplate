@@ -23,8 +23,8 @@ html
         img.balloon.balloon-js(src="img/globoJS.svg")
       nav.url-container
         ul.url-list
-          each i in ['#aboutme','#skills','#experience']
+          each i in ['aboutme','skills','experience','contact']
             li.url-navigation
-              a(href=i)= i
+              a(href='##{i}' class='#{i} url')
 
     script(src='js/main.js')

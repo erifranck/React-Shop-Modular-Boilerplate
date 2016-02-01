@@ -35,6 +35,7 @@ main
     
   &-entrie
     flex_order(auto,100%,center,center,center,nowrap)
+    
   &-name
     margin 0
     anim_delay(1.2s)
@@ -64,7 +65,19 @@ main
     right 50px
     balloon_position(100%,0)
 
-.url-container
-  flex_order(auto,100%,center,center,center,nowrap)
-  
+.url
+  text-decoration none
+  &:hover
+    font-size 1.3em    
+  &-container
+    flex_order(auto,100%,center,center,center,nowrap)
+.aboutme
+  text_urls('Sobre mi', clouds)
+.contact
+  text_urls('Contactos', clouds)
+.skills
+  text_urls('Habilidades', clouds)
+.experience
+  text_urls('Trabajos', clouds)
+    
   
