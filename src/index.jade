@@ -10,15 +10,21 @@ html
     link(href="css/style.css" rel="stylesheet")
   body
     main
-      hgroup
-        h1 Erifranck Nuñez
-        h2 Frontend Developer
-        .imgs-container
-          img(src="img/muelle2.svg" class="svg-field")
-          img(src="img/globoCSS.svg" class="fly svg-css")
-          img(src="img/globoHTML.svg" class="fly svg-html")
-       
-        
-        
+      .profile-container
+        img.avatar.animated.flip(src="img/perfil.jpg")
+        hgroup.profile-entrie
+          h1.profile-name.animated.bounce Erifranck Nuñez
+        span.profile-jobs
+          p.profile-job Desarrollador Frontend
+          p.profile-job Diseñador UI/UX
+          p.profile-job Ilustrador
+        img.balloon.balloon-html(src="img/globoHTML.svg")
+        img.balloon.balloon-css(src="img/globoCSS.svg")
+        img.balloon.balloon-js(src="img/globoJS.svg")
+      nav.url-container
+        ul.url-list
+          each i in ['#aboutme','#skills','#experience']
+            li.url-navigation
+              a(href=i)= i
 
     script(src='js/main.js')

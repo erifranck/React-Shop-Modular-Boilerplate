@@ -1,7 +1,9 @@
 {
   "name": "erifranck-github-io-jadestyl",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+      "normalize":"latest"
+    },
   "devDependencies": {
         "gh-pages": "^0.2.0",
         "gulp": "^3.8.11",
