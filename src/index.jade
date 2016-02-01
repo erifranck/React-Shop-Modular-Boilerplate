@@ -19,9 +19,21 @@ html
           p.profile-job Desarrollador Frontend
           p.profile-job Diseñador UI/UX
           p.profile-job Ilustrador
-        img.balloon.balloon-html.animated.fly(src="img/globoHTML.svg")
-        img.balloon.balloon-css(src="img/globoCSS.svg")
-        img.balloon.balloon-js(src="img/globoJS.svg")
+        .balloon.balloon-html.move_flying
+          .move_zoom
+            .move_x2
+              .move_y
+                img.balloon-float.fly(src="img/globoHTML.svg")
+        .balloon.balloon-css
+          .move_zoom
+            .move_x3
+              .move_y
+                img.balloon-float.fly(src="img/globoCSS.svg")
+        .balloon.balloon-js
+          .move_zoom
+            .move_x
+              .move_y
+                img.balloon-float.fly(src="img/globoJS.svg")
       nav.url-container
         ul.url-list
           each i in ['aboutme','skills','experience','contact']
