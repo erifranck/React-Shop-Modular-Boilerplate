@@ -41,7 +41,7 @@ gulp.task('html', ['clean:html'], function () {
 gulp.task('other-html', ['clean:html'], function () {
   return gulp.src('src/**/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('dist/templates'))
+    .pipe(gulp.dest('templates'))
     .pipe(connect.reload());
 });
 
