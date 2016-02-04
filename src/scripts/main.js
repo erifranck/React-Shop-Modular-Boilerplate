@@ -1,7 +1,21 @@
 window.$ = require('jquery');
 require('angular');
-require('angular-route');
-require('angular-animate');
 console.log('aokdoadk');
-var app = angular.module('landing_page', ['ngRoute', 'ngAnimate']);
-
+console.log(angular);
+var app = angular.module('landing_page', [require('angular-route'), require('angular-animate')]);
+app.config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: '../templates/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+});
