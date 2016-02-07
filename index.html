@@ -9,17 +9,18 @@
     <title>Erifranck Nuñez Frontend Developer</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body ng-app="landing_page">
+  <body ng-app="myapp">
     <div class="container">
       <div class="view-animate-container profile-container">
         <div ng-view="" class="view-animate bg-size"></div>
       </div>
-      <nav class="url-container">
+      <nav class="url-container"> 
         <ul class="url-list">
-          <li class="url-navigation"><a ng-ref="#/aboutme" class="aboutme url"></a></li>
-          <li class="url-navigation"><a ng-ref="#/skills" class="skills url"></a></li>
-          <li class="url-navigation"><a ng-ref="#/experience" class="experience url"></a></li>
-          <li class="url-navigation"><a ng-ref="#/contact" class="contact url"></a></li>
+          <li class="url-navigation"><a ng-href="#/init" class="url">Home</a></li>
+          <li class="url-navigation"><a ng-href="#/aboutme" class="aboutme url"></a></li>
+          <li class="url-navigation"><a ng-href="#/skills" class="skills url"></a></li>
+          <li class="url-navigation"><a ng-href="#/experience" class="experience url"></a></li>
+          <li class="url-navigation"><a ng-href="#/contact" class="contact url"></a></li>
         </ul>
       </nav>
       <div class="btn-social"></div>

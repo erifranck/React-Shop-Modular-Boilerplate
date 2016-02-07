@@ -8,15 +8,16 @@ html
     meta(name="author" content="")
     title Erifranck Nuñez Frontend Developer
     link(href="css/style.css" rel="stylesheet")
-  body(ng-app="landing_page")
+  body(ng-app="myapp")
     .container
       .view-animate-container.profile-container
         .view-animate.bg-size(ng-view="")
-      nav.url-container
+      nav.url-container 
         ul.url-list
+          li.url-navigation
+            a(ng-href="#/init" class="url") Home
           each i in ['aboutme','skills','experience','contact']
             li.url-navigation
-              a(ng-ref='#/#{i}' class='#{i} url')
+              a(ng-href='#/#{i}' class='#{i} url')
       .btn-social
-
     script(src='js/main.js')

@@ -1,21 +1,29 @@
 window.$ = require('jquery');
 require('angular');
-console.log('aokdoadk');
-console.log(angular);
-var app = angular.module('landing_page', [require('angular-route'), require('angular-animate')]);
-app.config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: '../templates/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
+require('angular-route');
+require('angular-animate');
+var app = angular.module('myapp', ['ngRoute','ngAnimate']);
+app.config(function($routeProvider){
+  $routeProvider
+    .when('/',{
+      templateUrl:'templates/profile.html'
+    })
+    .when('/skills',{
+      templateUrl:'templates/skills.html'
+    })
+    .when('/experience',{
+      templateUrl:'templates/jobs.html'
+    })
+    .when('/galery',{
+      templateUrl:'templates/galery.html'
+    })
+    .when('/contact',{
+      templateUrl:'templates/contact.html'
+    })
+    .when('/aboutme',{
+      templateUrl:'templates/about.html'
+    })
+    .otherwise({
         redirectTo: '/'
-      });
+    });
 });

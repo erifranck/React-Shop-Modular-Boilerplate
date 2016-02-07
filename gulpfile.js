@@ -22,7 +22,7 @@ var pkg = require('./package.json'),
 gulp.task('js', ['clean:js'], function () {
   return gulp.src('src/scripts/main.js')
     .pipe(isDist ? through() : plumber())
-    .pipe(browserify({ transform: ['debowerify'], debug: !isDist }))
+    .pipe(browserify({ transform: ['debowerify'],debug: !isDist}))
     .pipe(isDist ? uglify() : through())
     .pipe(rename('main.js'))
     .pipe(gulp.dest('js'))
@@ -95,7 +95,7 @@ gulp.task('clean:css', function () {
 
 gulp.task('connect', ['build'], function (done) {
   connect.server({
-    root: 'dist',
+    root: '.',
     port: 8000,
     livereload: true
   });
@@ -106,6 +106,7 @@ gulp.task('watch', function () {
   gulp.watch('src/**/*.jade', ['html','html-routes']);
   gulp.watch('src/**/*.html', ['other-html']);
   gulp.watch('src/styles/**/*.styl', ['css']);
+  gulp.watch('src/components/**/*.styl', ['css']);
   gulp.watch('src/images/**/*', ['images']);
   gulp.watch('src/scripts/**/*.js', ['js']);
 });
