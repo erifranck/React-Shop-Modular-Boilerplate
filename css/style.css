@@ -2872,11 +2872,128 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             transform: translateX(10px);
   }
 }
+.balloon {
+  position: absolute;
+  opacity: 0.8;
+}
+.balloon-html {
+  left: 20%;
+  top: 10%;
+  height: 3%;
+  width: 3%;
+  z-index: -2;
+}
+.balloon-css {
+  top: 5%;
+  right: 20%;
+  height: 4%;
+  width: 4%;
+  z-index: -2;
+}
+.balloon-js {
+  top: 8%;
+  left: 40%;
+  height: 5%;
+  width: 5%;
+  z-index: -2;
+}
+.balloon-float {
+  width: 100%;
+  height: 100%;
+}
+.fly {
+  -webkit-animation-name: flying;
+          animation-name: flying;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.move_zoom {
+  -webkit-animation-name: flying_zoon;
+          animation-name: flying_zoon;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.move_x {
+  -webkit-animation-name: flying_moveX;
+          animation-name: flying_moveX;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.move_y {
+  -webkit-animation-name: flying_moveY;
+          animation-name: flying_moveY;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.move_x2 {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-name: flying_moveX3;
+          animation-name: flying_moveX3;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.move_x3 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-name: flying_moveX2;
+          animation-name: flying_moveX2;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
 body {
   position: absolute;
   height: 100%;
   width: 100%;
   background-color: #ecf0f1;
+}
+.bg-size {
+  margin: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
 }
 .container {
   margin: auto;
@@ -2900,6 +3017,9 @@ body {
   z-index: 2;
   box-shadow: 9px 9px 53px -6px rgba(0,0,0,0.45);
 }
+.url {
+  color: #ecf0f1;
+}
 .url-navigation {
   display: inline-block;
   list-style: none;
@@ -2916,26 +3036,6 @@ body {
 .profile-container {
   position: relative;
   height: 80%;
-  margin: auto;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
 }
 .profile-entrie {
   margin: auto;
@@ -2960,9 +3060,10 @@ body {
           flex-wrap: nowrap;
 }
 .profile-name {
-  margin: 0;
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
+  color: #ecf0f1;
+  margin: 0;
 }
 .profile-jobs {
   margin: auto;
@@ -2987,6 +3088,7 @@ body {
           flex-wrap: nowrap;
 }
 .profile-job {
+  color: #2c3e50;
   font-size: 14px;
   margin-left: 5px;
 }
@@ -2997,35 +3099,6 @@ body {
   height: 100px;
   border-radius: 50%;
   z-index: 1;
-}
-.balloon {
-  position: absolute;
-  opacity: 0.8;
-}
-.balloon-html {
-  left: 20%;
-  top: 10%;
-  height: 3%;
-  width: 3%;
-  z-index: -2;
-}
-.balloon-css {
-  top: 5%;
-  right: 10%;
-  height: 4%;
-  width: 4%;
-  z-index: -2;
-}
-.balloon-js {
-  top: 15%;
-  right: 30%;
-  height: 5%;
-  width: 5%;
-  z-index: -2;
-}
-.balloon-float {
-  width: 100%;
-  height: 100%;
 }
 .url {
   text-decoration: none;
@@ -3092,70 +3165,6 @@ body {
 .experience:hover {
   color: #ecf0f1;
   font-size: 1.3em;
-}
-.fly {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-name: flying;
-          animation-name: flying;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-.move_zoom {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-name: flying_zoon;
-          animation-name: flying_zoon;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-.move_x {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-  -webkit-animation-name: flying_moveX;
-          animation-name: flying_moveX;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-.move_y {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-.move_x2 {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-  -webkit-animation-name: flying_moveX3;
-          animation-name: flying_moveX3;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-.move_x3 {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-  -webkit-animation-name: flying_moveX2;
-          animation-name: flying_moveX2;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
 }
 .field {
   width: 100%;

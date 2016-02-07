@@ -22,7 +22,7 @@ var pkg = require('./package.json'),
 gulp.task('js', ['clean:js'], function () {
   return gulp.src('src/scripts/main.js')
     .pipe(isDist ? through() : plumber())
-    .pipe(browserify({ transform: ['debowerify'], debug: !isDist }))
+    .pipe(browserify({ transform: ['debowerify'],debug: !isDist}))
     .pipe(isDist ? uglify() : through())
     .pipe(rename('main.js'))
     .pipe(gulp.dest('js'))
@@ -35,6 +35,13 @@ gulp.task('html', ['clean:html'], function () {
     .pipe(jade({ pretty: true }))
     .pipe(rename('index.html'))
     .pipe(gulp.dest('.'))
+    .pipe(connect.reload());
+});
+gulp.task('html-routes', ['clean:html'], function () {
+  return gulp.src('src/routes/*.jade')
+    .pipe(isDist ? through() : plumber())
+    .pipe(jade({ pretty: true }))
+    .pipe(gulp.dest('./templates'))
     .pipe(connect.reload());
 });
 
@@ -88,7 +95,7 @@ gulp.task('clean:css', function () {
 
 gulp.task('connect', ['build'], function (done) {
   connect.server({
-    root: 'dist',
+    root: '.',
     port: 8000,
     livereload: true
   });
@@ -96,9 +103,10 @@ gulp.task('connect', ['build'], function (done) {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('src/**/*.jade', ['html']);
+  gulp.watch('src/**/*.jade', ['html','html-routes']);
   gulp.watch('src/**/*.html', ['other-html']);
   gulp.watch('src/styles/**/*.styl', ['css']);
+  gulp.watch('src/components/**/*.styl', ['css']);
   gulp.watch('src/images/**/*', ['images']);
   gulp.watch('src/scripts/**/*.js', ['js']);
 });

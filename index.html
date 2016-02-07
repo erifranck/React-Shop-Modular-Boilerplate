@@ -9,43 +9,18 @@
     <title>Erifranck Nuñez Frontend Developer</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body ng-app="myapp">
     <div class="container">
-      <div class="profile-container"><img src="img/perfil.jpg" class="avatar animated flip"><img src="img/muelle2.svg" class="field">
-        <div class="profile-entrie">
-          <h1 class="profile-name animated bounce">Erifranck Nuñez</h1>
-        </div><span class="profile-jobs">
-          <p class="profile-job">Desarrollador Frontend</p>
-          <p class="profile-job">Diseñador UI/UX</p>
-          <p class="profile-job">Ilustrador</p></span>
-        <div class="balloon balloon-html move_flying">
-          <div class="move_zoom">
-            <div class="move_x2">
-              <div class="move_y"><img src="img/globoHTML.svg" class="balloon-float fly"></div>
-            </div>
-          </div>
-        </div>
-        <div class="balloon balloon-css">
-          <div class="move_zoom">
-            <div class="move_x3">
-              <div class="move_y"><img src="img/globoCSS.svg" class="balloon-float fly"></div>
-            </div>
-          </div>
-        </div>
-        <div class="balloon balloon-js">
-          <div class="move_zoom">
-            <div class="move_x">
-              <div class="move_y"><img src="img/globoJS.svg" class="balloon-float fly"></div>
-            </div>
-          </div>
-        </div>
+      <div class="view-animate-container profile-container">
+        <div ng-view="" class="view-animate bg-size"></div>
       </div>
-      <nav class="url-container">
+      <nav class="url-container"> 
         <ul class="url-list">
-          <li class="url-navigation"><a href="#aboutme" class="aboutme url"></a></li>
-          <li class="url-navigation"><a href="#skills" class="skills url"></a></li>
-          <li class="url-navigation"><a href="#experience" class="experience url"></a></li>
-          <li class="url-navigation"><a href="#contact" class="contact url"></a></li>
+          <li class="url-navigation"><a ng-href="#/init" class="url">Home</a></li>
+          <li class="url-navigation"><a ng-href="#/aboutme" class="aboutme url"></a></li>
+          <li class="url-navigation"><a ng-href="#/skills" class="skills url"></a></li>
+          <li class="url-navigation"><a ng-href="#/experience" class="experience url"></a></li>
+          <li class="url-navigation"><a ng-href="#/contact" class="contact url"></a></li>
         </ul>
       </nav>
       <div class="btn-social"></div>
