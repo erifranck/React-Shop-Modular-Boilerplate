@@ -1,11 +1,12 @@
-import { NotFound, Home } from 'main/components'
+import { NotFound } from 'main/components'
+import {HomePage} from 'main'
 
 export default [
   {
     path: '/',
     exact: true,
     protected: false,
-    component: Home
+    component: HomePage
   },
   {
     component: NotFound,
