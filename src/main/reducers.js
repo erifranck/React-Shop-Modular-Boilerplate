@@ -1,8 +1,9 @@
 import * as types from 'main/types'
+import skills from 'commons/utils/skills'
 
 const initialState = {
   ishover: false,
-  selected: 0
+  selected: skills[0]
 }
 
 export const main = (state = initialState, action) => {
@@ -10,12 +11,12 @@ export const main = (state = initialState, action) => {
     case types.HOVER:
       return {
         ishover: true,
-        selected: Math.floor(Math.random() * 5) + 1
+        selected: skills[ Math.floor(Math.random() * 4) ]
       }
     case types.BLUR:
       return {
+        ...state,
         ishover: false,
-        selected: 0
       }
     default:
       return state
