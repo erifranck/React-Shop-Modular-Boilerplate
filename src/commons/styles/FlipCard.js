@@ -6,6 +6,7 @@ export const FlipCard = glamorous.div(
     width: '200px',
     position: 'relative',
     perspective: '1200px',
+    zIndex: 100,
     '& .front-wrapper, & .back-wrapper': {
       backfaceVisibility: 'hidden',
       transformStyle: 'preserve-3d',
