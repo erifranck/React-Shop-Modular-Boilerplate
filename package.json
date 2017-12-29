@@ -2,7 +2,7 @@
   "name": "erifranck.com",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://erifranck.github.io",
+  "homepage": "https://erifranck.com",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "glamor": "^2.20.40",
@@ -22,6 +22,7 @@
   "scripts": {
     "start": "NODE_PATH=./src react-scripts start",
     "build": "NODE_PATH=./src react-scripts build",
+    "deploy": "npm run build && gh-pages -b master -d build",
     "test": "NODE_PATH=./src react-scripts test --env=jsdom",
     "eject": "NODE_PATH=./src react-scripts eject"
   },
