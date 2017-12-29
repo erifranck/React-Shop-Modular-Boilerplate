@@ -24,9 +24,14 @@ export const Home = glamorous.div(
       }
     }
   },
-  ({backgroundColor}) => ({
+  ({backgroundColor, color}) => ({
     '& .profile-wrapper': {
-      backgroundColor
+      backgroundColor,
+      '& .container': {
+        '& h2': {
+          color
+        }
+      }
     }
   })
 )

@@ -24,7 +24,9 @@ export class Home extends Component {
       <Layout
         color={this.props.ishover ? selected.color : undefined}
         backgroundColor={this.props.ishover ? selected.bgColor : undefined}>
-        <HomeStyles backgroundColor={this.props.ishover ? selected.bgColor : undefined}>
+        <HomeStyles
+          color={this.props.ishover ? selected.color : undefined}
+          backgroundColor={this.props.ishover ? selected.bgColor : undefined}>
           <div className='profile-wrapper'>
             <Grid>
               <Row>
