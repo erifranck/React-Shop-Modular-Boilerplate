@@ -31,6 +31,15 @@ export const Header = glamorous.div(
     backgroundColor,
     '& .logo': {
       color
+    },
+    '& nav': {
+      '& .nav-container': {
+        '& li': {
+          '& a': {
+            color
+          }
+        }
+      }
     }
   })
 
