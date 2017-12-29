@@ -52,8 +52,9 @@ export class Home extends Component {
         </HomeStyles>
         <Card
           position='absolute'
+          width='50%'
           top='30%'
-          left='100px'
+          left='15%'
         />
       </Layout>
     )
