@@ -2,7 +2,7 @@
   "name": "erifranck.com",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://erifranck.com",
+  "homepage": "http://www.erifranck.com",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "glamor": "^2.20.40",
