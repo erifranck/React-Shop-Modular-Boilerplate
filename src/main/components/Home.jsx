@@ -21,12 +21,8 @@ export class Home extends Component {
   render() {
     const { selected } = this.props
     return(
-      <Layout
-        color={this.props.ishover ? selected.color : undefined}
-        backgroundColor={this.props.ishover ? selected.bgColor : undefined}>
-        <HomeStyles
-          color={this.props.ishover ? selected.color : undefined}
-          backgroundColor={this.props.ishover ? selected.bgColor : undefined}>
+      <Layout>
+        <HomeStyles >
           <div className='profile-wrapper'>
             <Grid>
               <Row>
@@ -37,15 +33,7 @@ export class Home extends Component {
                 </Col>
                 <Col md={4}>
                   <Row end='xs'>
-                    <FlipCard
-                      width='200px'
-                      height='200px'
-                      radius='50%'
-                      flipCallback={this.onFlip}
-                      bgColorBack={selected.bgColor}
-                      FrontBody={<img src={profile} alt='' className='profile' />}
-                      BackBody={<img src={selected.img} alt='' className='profile' />}
-                    />
+                    <FlipCard />
                   </Row>
                 </Col>
               </Row>
