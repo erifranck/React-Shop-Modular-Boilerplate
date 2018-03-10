@@ -1,24 +1,31 @@
-import * as types from 'main/types'
-import skills from 'commons/utils/skills'
+import { Types as ReduxSauceTypes, createReducer, createActions } from 'reduxsauce'
 
-const initialState = {
-  ishover: false,
-  selected: skills[0]
+/* ------------- Types and Action Creators ------------- */
+
+const { Types, Creators } = createActions({
+  fetchGithub: null,
+  fetchGithubSuccess: ['payload'],
+  fetchGithubFail: ['error']
+})
+
+export const mainTypes = Types
+export default Creators
+
+/* ------------- Initial State ------------- */
+
+export const INITIAL_STATE = {
+  fetching: false,
+  githubData: {}
 }
 
-export const main = (state = initialState, action) => {
-  switch (action.type) {
-    case types.HOVER:
-      return {
-        ishover: true,
-        selected: skills[ Math.floor(Math.random() * 4) ]
-      }
-    case types.BLUR:
-      return {
-        ...state,
-        ishover: false,
-      }
-    default:
-      return state
-  }
-}
+/* ------------- Reducers ------------- */
+
+const defaultAction = (state) => ({
+  ...state
+})
+
+/* ------------- Hookup Reducers To Types ------------- */
+
+export const reducer = createReducer(INITIAL_STATE, {
+  [ReduxSauceTypes.DEFAULT]: defaultAction
+})

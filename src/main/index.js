@@ -1,12 +1,15 @@
 import { App, Home } from 'main/components'
 import {connect} from 'react-redux'
-import {onHover, onBlur} from 'main/actions'
+import {bindActionCreators} from 'redux'
 
-export const AppPage = App
-export const HomePage = connect((state) => ( {
+const mapStateToProps = (state) => ( {
   ishover: state.main.ishover,
   selected: state.main.selected,
-}), {
-  onHover,
-  onBlur
-})( Home )
+})
+
+const mapDispathToProps = (dispatch) => ({
+
+})
+
+export const AppPage = App
+export const HomePage = connect(mapStateToProps, mapDispathToProps)( Home )
