@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
 // custom import
-import { main } from 'main/reducers'
+import { reducer as main } from 'main/reducers'
 
 const rootReducer = combineReducers({
   main

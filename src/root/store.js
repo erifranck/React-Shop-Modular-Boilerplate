@@ -1,14 +1,20 @@
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import thunk from 'redux-thunk'
+import createSagaMiddleware from 'redux-saga'
 
 // custom import
+import rootSaga from 'root/saga'
 import rootReducer from 'root/reducers'
 
-const middleware = [thunk]
+const sagaMiddleware = createSagaMiddleware()
+
+
+const middleware = [sagaMiddleware]
 
 const configureStore = preloadedState => {
   const store = createStore(rootReducer, preloadedState, composeWithDevTools(applyMiddleware(...middleware)))
+
+  sagaMiddleware.run(rootSaga)
 
   return store
 }
