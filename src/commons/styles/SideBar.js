@@ -33,6 +33,19 @@ export const SideBar = glamorous.div(({ theme }) => ({
   },
   '& .sidebar-link-wrapper': {
     height: 'calc(100% - 300px)',
-    width: '100%'
+    width: '100%',
+
+    '& ul': {
+      'list-style-type': 'none',
+      '& li.sidebar-button': {
+        height: theme.main.buttons.height,
+        '& a': {
+          textDecoration: 'none',
+          color: theme.colors.primary,
+          fontSize: theme.fonts.linkSize
+        }
+      }
+    }
+
   }
 }))
