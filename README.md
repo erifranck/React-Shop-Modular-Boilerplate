@@ -1,2 +1,3 @@
-Hello I'm erifranck Frontend developer, I have 3 years of experience.
-I have worked on a lot of project in different contries like Chile, Costa Rica, Spain, San Francisco, United States and Australia.
+# React Shop Modular Boilerplate
+
+Estructura inicial para tus proyectos en react.js con redux de manera ordenada, la base de este proyecto fue realizada con **create-react-app** .
