@@ -1,6 +1,6 @@
-export * from 'commons/styles/Card'
 export * from 'commons/styles/Header'
 export * from 'commons/styles/FlipCard'
 export * from 'commons/styles/Layout'
 export * from 'commons/styles/SideBar'
 export * from 'commons/styles/Divider'
+export * from 'commons/styles/Paper'

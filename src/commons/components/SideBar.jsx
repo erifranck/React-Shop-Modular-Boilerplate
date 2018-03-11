@@ -18,8 +18,8 @@ export const SideBar = ({links = [], imageUrl, avatarTitle}) => (
     <div className='sidebar-link-wrapper'>
       <ul>
         {links.map((item, key) => (
-          <li className='sidebar-button'>
-            <Link key={key} to={item.url} >
+          <li className='sidebar-button' key={key} >
+            <Link to={item.url} >
               { item.name }
             </Link>
             <Divider type='dotted' />

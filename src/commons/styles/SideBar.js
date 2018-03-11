@@ -17,26 +17,40 @@ export const SideBar = glamorous.div(({ theme }) => ({
     '& .avatar-container': {
       height: '200px',
       width: '200px',
+      position: 'relative',
       '&:before': {
         content: '" "',
-        display: 'block',
-        margin: 'auto',
-        background: theme.colors.primary,
+        background: theme.colors.inverse,
+        border: `1px solid ${theme.colors.primary}`,
         height: '150px',
         width: '150px',
-        borderRadius: '50%'
+        borderRadius: '50%',
+        position: 'absolute',
+        top: '0px',
+        left: '25px'
+      },
+      '& img': {
+        position: 'absolute',
+        top: '15px',
+        left: '40px',
+        height: '130px',
+        width: '130px'
       }
     },
     '& .avatar-title': {
-      textAlign: 'center'
+      textAlign: 'center',
+      position: 'absolute',
+      bottom: '0',
+      left: '0',
+      width: '100%'
     }
   },
   '& .sidebar-link-wrapper': {
-    height: 'calc(100% - 300px)',
+    height: 'calc(100% - 324px)',
     width: '100%',
 
     '& ul': {
-      'list-style-type': 'none',
+      listStyleType: 'none',
       '& li.sidebar-button': {
         height: theme.main.buttons.height,
         '& a': {

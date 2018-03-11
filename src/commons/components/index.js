@@ -1,6 +1,6 @@
-export * from 'commons/components/Cards'
 export * from 'commons/components/Layout'
 export * from 'commons/components/Header'
 export * from 'commons/components/FlipCard'
 export * from 'commons/components/SideBar'
 export * from 'commons/components/Divider'
+export * from 'commons/components/Paper'
