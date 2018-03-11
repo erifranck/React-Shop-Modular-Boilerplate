@@ -4,6 +4,7 @@ import { Types as ReduxSauceTypes, createReducer, createActions } from 'reduxsau
 
 const { Types, Creators } = createActions({
   fetchProduct: null,
+  onFetch: null,
   fetchProductSuccess: ['payload'],
   fetchProductFail: ['error']
 })
@@ -15,7 +16,7 @@ export default Creators
 
 export const INITIAL_STATE = {
   fetching: false,
-  data: {}
+  data: []
 }
 
 /* ------------- Reducers ------------- */
@@ -24,8 +25,28 @@ const defaultAction = (state) => ({
   ...state
 })
 
+const onFetch = (state) => ({
+  ...state,
+  fetching: true
+})
+
+const fetchSuccess = (state, action) => ({
+  ...state,
+  fetching: false,
+  data: action.payload
+})
+
+const fetchFail = (state, action) => ({
+  ...state,
+  fetching: false,
+  data: action.error
+})
+
 /* ------------- Hookup Reducers To Types ------------- */
 
 export const reducer = createReducer(INITIAL_STATE, {
-  [ReduxSauceTypes.DEFAULT]: defaultAction
+  [ReduxSauceTypes.DEFAULT]: defaultAction,
+  [Types.ON_FETCH]: onFetch,
+  [Types.FETCH_PRODUCT_SUCCESS]: fetchSuccess,
+  [Types.FETCH_PRODUCT_FAIL]: fetchFail
 })
