@@ -17,6 +17,9 @@ const theme = {
     bgcolor: colors.white,
     buttons: {
       height: '60px'
+    },
+    card: {
+      height: '200px'
     }
   }
 }
