@@ -8,7 +8,8 @@ const boxShadow = [
   'rgba(0, 0, 0, 0.3) 0px 19px 60px, rgba(0, 0, 0, 0.22) 0px 15px 20px'
 ]
 
-export const Paper = glamorous.div(({theme, level = 1}) => ({
+export const Paper = glamorous.div(({theme, level = 1, width}) => ({
   boxShadow: boxShadow[level],
-  background: theme.colors.inverse
+  background: theme.colors.inverse,
+  width: width
 }))
