@@ -1,10 +1,9 @@
 import { App, Home } from 'main/components'
 import {connect} from 'react-redux'
-import {bindActionCreators} from 'redux'
 
-const mapStateToProps = (state) => ( {
+const mapStateToProps = (state) => ({
   ishover: state.main.ishover,
-  selected: state.main.selected,
+  selected: state.main.selected
 })
 
 const mapDispathToProps = (dispatch) => ({
@@ -12,4 +11,4 @@ const mapDispathToProps = (dispatch) => ({
 })
 
 export const AppPage = App
-export const HomePage = connect(mapStateToProps, mapDispathToProps)( Home )
+export const HomePage = connect(mapStateToProps, mapDispathToProps)(Home)

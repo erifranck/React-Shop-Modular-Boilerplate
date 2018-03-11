@@ -9,6 +9,6 @@ export default [
     component: HomePage
   },
   {
-    component: NotFound,
+    component: NotFound
   }
 ]
