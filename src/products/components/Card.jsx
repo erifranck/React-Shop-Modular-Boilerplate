@@ -4,13 +4,14 @@ import {Card as CardStyles} from 'products/styles'
 import PropTypes from 'prop-types'
 
 export class Card extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       editImage: false,
       editName: false,
       editDescription: false,
-      editPrice: false
+      editPrice: false,
+      values: props
     }
   }
   render () {
@@ -21,9 +22,13 @@ export class Card extends Component {
             <img src={this.props.url} />
           </div>
           <div className='card-body'>
-            <h3>
-              {this.props.name}
-            </h3>
+            {
+              !this.state.editName ?
+                <h3>
+                  {this.props.name}
+                </h3>
+                : <input />
+            }
             <p>
               {this.props.description}
             </p>
