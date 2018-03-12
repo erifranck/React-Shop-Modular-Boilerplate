@@ -16,7 +16,12 @@ export class ProductList extends Component {
         <ProductListStyles>
           {
             this.props.products.map(item => (
-              <Card key={item.id} />
+              <Card
+                url={item.image}
+                price={item.price}
+                description={item.description}
+                name={item.name}
+                key={item.id} />
             ))
           }
         </ProductListStyles>
