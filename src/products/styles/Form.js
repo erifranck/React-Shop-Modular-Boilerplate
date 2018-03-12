@@ -13,6 +13,9 @@ export const Form = glamorous.div(({theme}) => ({
     },
     '& .required': {
       color: theme.colors.secondary
+    },
+    '& .error': {
+      color: theme.colors.secondary
     }
   }
 }))
