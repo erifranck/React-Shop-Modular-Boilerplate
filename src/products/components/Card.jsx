@@ -13,7 +13,29 @@ export class Card extends Component {
       editPrice: false,
       values: props
     }
+    this.toggle = this.toggle.bind(this)
+    this.onChange = this.onChange.bind(this)
   }
+
+  toggle (input, value) {
+    this.setState({
+      [`edit${input}`]: value
+    })
+  }
+
+  onChange (input, event) {
+    this.setState({
+      values: {
+        ...this.state.values,
+        [input]: event.target.value
+      }
+    })
+  }
+
+  handleChange () {
+
+  }
+
   render () {
     return (
       <Paper width='250px' leven={1} className='card-wrapper' >
@@ -24,10 +46,14 @@ export class Card extends Component {
           <div className='card-body'>
             {
               !this.state.editName ?
-                <h3>
+                <h3 onClick={() => this.toggle('Name', true)} >
                   {this.props.name}
                 </h3>
-                : <input />
+                : <input
+                  autoFocus
+                  onBlur={() => this.toggle('Name', false)}
+                  value={this.state.values.name}
+                  onChange={(event) => this.onChange('name', event)} />
             }
             <p>
               {this.props.description}
