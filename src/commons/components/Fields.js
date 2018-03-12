@@ -13,6 +13,7 @@ export const RenderSimpleField = ({ input, label, type, meta: { touched, error, 
         </span>
         }
       </label>
+      <br />
       <input {...input} type={type} placeholder={placeholder} valid={!error && true} />
       {touched &&
         ((error && <div className='error' >{error}</div>) ||

@@ -5,6 +5,7 @@ import {Paper as PaperStyles} from 'commons/styles'
 export const Paper = (props) => {
   return (
     <PaperStyles
+      style={props.style}
       className={props.className}
       width={props.width}
       level={props.level} >
@@ -17,5 +18,6 @@ Paper.propTypes = {
   children: PropTypes.node,
   width: PropTypes.string,
   level: PropTypes.number,
-  className: PropTypes.string
+  className: PropTypes.string,
+  style: PropTypes.object
 }
