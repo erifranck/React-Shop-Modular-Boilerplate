@@ -19,7 +19,8 @@ const theme = {
       height: '60px'
     },
     card: {
-      height: '200px'
+      height: '300px',
+      width: '250px'
     }
   }
 }
